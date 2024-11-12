@@ -40,4 +40,5 @@ This project is an elegant and luxurious e-commerce website for selling high-end
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/luxury-perfume-ecommerce.git
+   git clone https://github.com/Enochrwa/AuraLuxe.git
+   ```
