@@ -366,7 +366,6 @@ const searchBar = document.querySelector('.search-aura');
 const cart = document.getElementById('cart');
 const displayAdded = document.getElementById('display-added');
 const logoImg = document.querySelector(".logo");
-const firstImg = document.querySelector(".img-1");
 let intervalId = null;
 let currentIndex = 0;
 
@@ -486,3 +485,5 @@ cart.addEventListener('mouseover', () => {
 cart.addEventListener('mouseout', () => {
     displayAdded.classList.add('hidden');
 })
+
+
