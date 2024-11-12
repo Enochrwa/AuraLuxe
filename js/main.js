@@ -360,7 +360,6 @@ const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');
 const cardSection = document.querySelector('.card-section');
 const cartNumber = document.querySelector('.cart-number');
-const addBtn = document.querySelector('.add-to-cart');
 const loadMoreBtn = document.querySelector(".load-more");
 const searchBar = document.querySelector('.search-aura');
 const cart = document.getElementById('cart');
@@ -426,8 +425,6 @@ const loadMore = () => {
     }
 }
 
-
-
 firstPerfumes.forEach((perfume) => {
     cardSection.innerHTML += `
 
@@ -452,7 +449,7 @@ firstPerfumes.forEach((perfume) => {
                     <div class="mt-4 flex justify-between items-center">
                         <span class="text-lg font-bold text-gold-400">${perfume.price}</span>
                         <button
-                            class="add-to-cart bg-gold-400 text-black font-bold py-2 px-4 rounded-full hover:bg-slate-950 hover:text-slate-300 transition duration-200">
+                            class="cartButton bg-gold-400 text-black font-bold py-2 px-4 rounded-full hover:bg-slate-950 hover:text-slate-300 transition duration-200">
                             Add to Cart
                         </button>
                     </div>
