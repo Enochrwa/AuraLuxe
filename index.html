@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Luxe - Luxury Perfumes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.3/dist/tailwind.min.css" rel="stylesheet">
+    <!-- DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="bg-black text-white ">
+
+    <!-- Header -->
+    <!-- Enhanced Header -->
+    <header
+    class="flex items-center justify-between bg-black bg-opacity-90 text-white fixed p-4 px-8 w-full shadow-lg z-50">
+    <!-- Logo Section -->
+    <div id="logo" class="flex items-center">
+        <img src="/images/logo.webp" alt="aura_logo" class="h-10 mr-2">
+        <span class="text-xl lg:text-2xl font-serif font-bold text-gold-400">Aura Perfumes</span>
+    </div>
+
+    <!-- Search Bar -->
+    <div id="search" class="hidden md:flex relative items-center w-full md:w-[300px] lg:w-[400px] xl:w-[600px] mx-4">
+        <input type="text" placeholder="Search for luxury scents..."
+            class="search-aura input input-bordered w-full rounded-full px-4 py-2 text-black focus:outline-none focus:ring focus:ring-gold-400 transition duration-200">
+        <span class="absolute right-4 text-gray-500 cursor-pointer">
+            <i class="fa fa-search text-lg"></i>
+        </span>
+    </div>
+
+    <!-- Signup Button -->
+    <div id="signup-login-btn" class="hidden sm:block ml-6">
+        <button
+            class="btn bg-gold-400 text-black font-semibold px-4 lg:px-6 py-2 rounded-full transition duration-200 hover:bg-gold-500">Sign
+            Up</button>
+    </div>
+
+    <!-- Cart Icon -->
+    <div id="cart" class="relative ml-4 sm:ml-6">
+        <span><i
+                class="fa fa-shopping-cart font-bold text-2xl lg:text-3xl text-gold-400 cursor-pointer hover:text-gold-500"></i></span>
+        <!-- Cart Item Count -->
+        <span
+            class="cart-number absolute -top-1 -right-2 bg-red-600 text-white text-xs lg:text-sm rounded-full w-5 h-5 flex items-center justify-center">4</span>
+        <span
+            id="display-added"
+            class="absolute hidden bg-teal-950 rounded-lg p-2 font-semibold flex items-center justify-center">You have added 4 items.</span>
+    </div>
+    </header>
+
+    <main class="bg-white text-white pt-24"> 
+        <!-- Hello section -->
+        <div>
+            <section
+                class="hero-section md:ml-15 mr-20 py-10 bg-gray-950 flex items-center justify-center -mt-12 w-full">
+                <div class="gallery-container carousel w-[95%] max-w-l rounded-lg overflow-hidden shadow-lg relative">
+                    <div class="carousel-item relative w-full cursor-pointer">
+                        <!-- Image with fade-in and hover effects -->
+                        <img src="/images/perfume_advert/pexels-ad-1.jpg" alt="Image" class="img animated-image w-full h-[400px] object-cover rounded-lg ">
+            
+                        <!-- Overlay Text -->
+                        <span
+                            class="overlay absolute bottom-7 left-5 bg-black bg-opacity-50 text-white font-semibold text-lg px-4 py-2 rounded-md shadow-md">
+                            See Beauty!
+                        </span>
+            
+                        <!-- Navigation Buttons -->
+                        <div class="absolute inset-0 flex items-center justify-between px-4">
+                            <button
+                                class="prev btn btn-circle bg-white bg-opacity-75 text-black hover:bg-opacity-100 shadow-md transition transform hover:scale-110 duration-300 ease-out">❮</button>
+                            <button
+                                class="next btn btn-circle bg-white bg-opacity-75 text-black hover:bg-opacity-100 shadow-md transition transform hover:scale-110 duration-300 ease-out">❯</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        </div>
+        <!-- perfume card section -->
+        <div>
+            <div class="card-section grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+                <!-- Perfume Card Template -->
+                <div class="bg-black border border-gray-700 rounded-lg overflow-hidden shadow-lg text-white max-w-xs mx-auto">
+                    <!-- Image Section -->
+                    <div class="relative overflow-hidden">
+                        <img src="/images/perfume_images/pexels-1.jpg" alt="Perfume" class="w-full h-60 object-cover">
+                        <div class="absolute top-2 right-2 bg-gold-400 text-black text-xs font-bold px-2 py-1 rounded">New</div>
+                    </div>
+            
+                    <!-- Details Section -->
+                    <div class="p-6">
+                        <!-- Perfume Title -->
+                        <h2 class="text-2xl font-serif font-bold text-gold-400 mb-2">Euphoria</h2>
+                        <p class="text-sm text-gray-400 font-sans">By Aura Luxe</p>
+            
+                        <!-- Category and Description -->
+                        <p class="mt-3 font-sans text-gray-300 text-sm">Category: <span class="text-white">Floral</span></p>
+                        <p class="mt-2 text-gray-400 text-sm font-sans">A captivating floral fragrance that brings elegance and
+                            grace to your aura. Perfect for high-end perfume lovers.</p>
+            
+                        <!-- Price and Button -->
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="text-lg font-bold text-gold-400">$120</span>
+                            <button
+                                class="bg-gold-400 text-black font-bold py-2 px-4 rounded-full hover:bg-gold-500 transition duration-200">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+        </div>
+    </main>
+
+
+    <!-- Footer Section -->
+    <footer class="bg-black text-white py-10 px-8 mt-20">
+    
+        <!-- Main Footer Content -->
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+    
+            <!-- Logo and About Section -->
+            <div class="mb-6">
+                <h2 class="text-3xl font-serif font-bold text-gold-400 mb-3">Aura Perfumes</h2>
+                <p class="text-gray-400 mb-4">
+                    Discover the essence of luxury with Aura Perfumes. Our selection of high-end fragrances embodies
+                    elegance, sophistication, and timeless beauty.
+                </p>
+                <div class="flex space-x-4 mt-4">
+                    <a href="#" class="text-gold-400 hover:text-gold-500"><i class="fab fa-facebook text-2xl"></i></a>
+                    <a href="#" class="text-gold-400 hover:text-gold-500"><i class="fab fa-instagram text-2xl"></i></a>
+                    <a href="#" class="text-gold-400 hover:text-gold-500"><i class="fab fa-twitter text-2xl"></i></a>
+                    <a href="#" class="text-gold-400 hover:text-gold-500"><i class="fab fa-pinterest text-2xl"></i></a>
+                </div>
+            </div>
+    
+            <!-- Quick Links Section -->
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gold-400 mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">Shop All</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">New Arrivals</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">Best Sellers</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">Gift Sets</a></li>
+                </ul>
+            </div>
+    
+            <!-- Customer Service Section -->
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gold-400 mb-4">Customer Service</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">Shipping & Returns</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a></li>
+                </ul>
+            </div>
+    
+            <!-- Newsletter Subscription Section -->
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gold-400 mb-4">Subscribe to Our Newsletter</h3>
+                <p class="text-gray-400 mb-4">Get exclusive offers, updates, and news on luxury perfumes.</p>
+                <div class="flex">
+                    <input type="email" placeholder="Your email address"
+                        class="input input-bordered w-full rounded-l-full text-black px-4 focus:outline-none" />
+                    <button class="bg-gold-400 text-black font-bold px-4 py-2 rounded-r-full transition hover:bg-gold-500">
+                        Subscribe
+                    </button>
+                </div>
+            </div>
+    
+        </div>
+    
+        <!-- Bottom Footer -->
+        <div class="border-t border-gray-700 mt-10 pt-6">
+            <div class="container mx-auto flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+                <p>&copy; 2024 Aura Perfumes. All Rights Reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white">Privacy Policy</a>
+                    <span>|</span>
+                    <a href="#" class="hover:text-white">Terms of Service</a>
+                    <span>|</span>
+                    <a href="#" class="hover:text-white">Site Map</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
+
+
+
+

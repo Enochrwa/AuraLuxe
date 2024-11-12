@@ -1,0 +1,77 @@
+* {
+    transition: all 0.3s ease;
+}
+
+header {
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+   
+}
+
+.text-gold-400 {
+    color: #FFD700;
+}
+
+.bg-gold-400 {
+    background-color: #FFD700;
+}
+
+.bg-gold-500 {
+    background-color: #FFC107;
+}
+
+.input:focus {
+    border-color: #FFD700;
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+#cart .absolute {
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.fa-search:hover,
+.fa-shopping-cart:hover {
+    transform: scale(1.1);
+    color: #FFC107;
+    transition: color 0.3s, transform 0.3s;
+}
+
+
+.animated-image {
+      opacity: 0;
+      animation: fadeIn 1.5s ease-in-out forwards;
+  }
+
+  /* Hover effect for image */
+.animated-image:hover {
+    transform: scale(1.05) rotate(1deg);
+    transition: transform 0.5s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.search-aura::placeholder {
+    color: #bbb;
+    opacity: 0.7;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.search-aura:focus::placeholder {
+    opacity: 0.5;
+}
+
+@keyframes fadeIn {
+      from {
+          opacity: 0;
+          transform: translateY(20px);
+      }
+
+      to {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
