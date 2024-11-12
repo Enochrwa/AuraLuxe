@@ -365,7 +365,8 @@ const loadMoreBtn = document.querySelector(".load-more");
 const searchBar = document.querySelector('.search-aura');
 const cart = document.getElementById('cart');
 const displayAdded = document.getElementById('display-added');
-
+const logoImg = document.querySelector(".logo");
+const firstImg = document.querySelector(".img-1");
 let intervalId = null;
 let currentIndex = 0;
 
@@ -383,7 +384,7 @@ const firstPerfumes = perfumes.slice(1, displayState.displayableCards);
 
 //hero-section
 
-
+logoImg.src = 'images/aura-logo.png';
 function updateImage() {
     img.src = String(perfumeAdverts[currentIndex]?.image);
     overlay.textContent = perfumeAdverts[currentIndex].description;
