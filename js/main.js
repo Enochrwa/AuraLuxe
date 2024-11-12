@@ -442,7 +442,7 @@ firstPerfumes.forEach((perfume) => {
                     <p class="text-sm text-gray-400 font-sans">By Aura Luxe</p>
             
                     <!-- Category and Description -->
-                    <p class="mt-3 font-sans text-gray-300 text-sm">Category: <span class="text-white">${perfume.category}</span></p>
+                    <p class="mt-3 font-sans text-gray-300 text-sm">Category: <span class="text-white font-bold">${perfume.category}</span></p>
                     <p class="mt-2 text-gray-400 text-sm font-sans">${perfume.description}</p>
             
                     <!-- Price and Button -->
