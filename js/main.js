@@ -353,6 +353,7 @@ const searchPlaceholders = [
 
 
 
+
 const galleryContainer = document.querySelector('.gallery-container');
 const img = document.querySelector('.img');
 const overlay = document.querySelector('.overlay');
@@ -364,13 +365,31 @@ const loadMoreBtn = document.querySelector(".load-more");
 const searchBar = document.querySelector('.search-aura');
 const cart = document.getElementById('cart');
 const displayAdded = document.getElementById('display-added');
+const hamburger = document.querySelector('.hamburger');
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+const arrivals = document.querySelector('.arrivals');
+const bestSellers = document.querySelector('.best-sellers');
+const giftSets = document.querySelector('.gift-sets');
 const logoImg = document.querySelector(".logo");
+const links = document.querySelectorAll('.links li a');
+
+
 let intervalId = null;
 let currentIndex = 0;
 
 
+
+hamburgerMenu.addEventListener('click', () => {
+    hamburger.classList.toggle('hidden');
+});
+
+links.forEach((link) => {
+    link.addEventListener('click', () => {
+        hamburger.classList.add('hidden');
+    })
+})
 const displayState = {
-    displayableCards: 15,
+    displayableCards: 12,
     addedItems:0,
     setDisplayableCards: function (number){
     this.displayableCards += number
@@ -378,6 +397,9 @@ const displayState = {
 }
 
 const firstPerfumes = perfumes.slice(1, displayState.displayableCards);
+const newArrivals = perfumes.slice(13, 17);
+const bestSellerPerfumes = perfumes.slice(18, 22);
+const giftSetsPerfumes = perfumes.slice(23, 27);
 
 
 //hero-section
@@ -459,17 +481,63 @@ firstPerfumes.forEach((perfume) => {
     `;
 })
 
-cardSection.innerHTML += `
 
-    <div class="col-span-full flex justify-center mt-1 mb-4">
+
+newArrivals.forEach((arrival) => {
+
+    arrivals.innerHTML += `
+        <div
+                    class="bg-gray-800 rounded-xl p-4 hover:shadow-lg transition duration-200 ease-in-out transform hover:scale-105">
+                    <img src="${arrival.image}" alt="product-${arrival.name}"
+                        class="rounded-lg mb-4 w-full h-64 object-cover transition-transform duration-300 hover:scale-105">
+        
+                    <div class="text-center">
+                        <h3 class="text-xl font-serif font-semibold text-gold-400">${arrival.name}</h3>
+                        <p class="text-gray-400 mt-2 text-lg">${arrival.price}</p>
+        
+                        <button
+                            class="mt-6 bg-gold-400 text-gray-900 w-full py-2 rounded-full font-bold hover:bg-slate-900 hover:text-slate-200 transition duration-200">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+    `;
+})
+
+bestSellerPerfumes.forEach((bestSeller) => {
+
+    bestSellers.innerHTML += `
+
+        <div
+                    class="bg-white rounded-lg p-4 transform transition duration-300 hover:scale-105 shadow-md hover:shadow-lg">
+                    <img src="${bestSeller.image}" alt="Best Seller"
+                        class="rounded-md mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-semibold text-black mb-2">${bestSeller.name}</h3>
+                    <p class="text-gold-400 text-lg font-bold mb-3">${bestSeller.price}</p>
                     <button
-                        class="load-more bg-gold-400 text-black font-bold py-3 px-8 rounded-full shadow-xl hover:bg-slate-900 hover:text-slate-200 transform transition duration-200 hover:scale-105">
-                        Load More
+                        class="w-full py-2 bg-gold-400 text-black font-semibold rounded hover:bg-white hover:text-gold-400 border border-gold-400 transition duration-300">
+                        Add to Cart
                     </button>
                 </div>
 
-`;
+    `;
+});
 
+giftSetsPerfumes.forEach((giftSet) => {
+
+    giftSets.innerHTML += `
+        <div class="bg-gray-800 rounded-lg p-5 transform transition duration-500 hover:scale-105 hover:shadow-2xl">
+                    <img src="${giftSet.image}" alt="Gift Set"
+                        class="rounded-lg mb-5 w-full h-52 object-cover transition duration-300 hover:opacity-90">
+                    <h3 class="text-xl font-semibold text-gold-400 mb-2">${giftSet.name}</h3>
+                    <p class="text-gray-300 text-lg font-light mb-3">${giftSet.price}</p>
+                    <button
+                        class="w-full py-2 bg-gold-400 text-black font-semibold rounded-lg hover:bg-white hover:text-gold-400 border border-gold-400 transition duration-300">
+                        Add to Cart
+                    </button>
+                </div>
+    `;
+})
 
 setInterval(() => {
     const placeholderRandom = Math.floor(Math.random() * searchPlaceholders.length);

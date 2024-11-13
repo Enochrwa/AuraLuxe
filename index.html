@@ -48,12 +48,35 @@
         <span><i
                 class="fa fa-shopping-cart font-bold text-2xl lg:text-3xl text-gold-400 cursor-pointer hover:text-gold-500"></i></span>
         <!-- Cart Item Count -->
-        <span
-            class="cart-number absolute -top-1 -right-2 bg-red-600 text-white text-xs lg:text-sm rounded-full w-5 h-5 flex items-center justify-center">4</span>
+        <a href="orders.html">
+            <span
+                class="cart-number absolute -top-1 -right-2 bg-red-600 text-white text-xs lg:text-sm rounded-full w-5 h-5 flex items-center justify-center">4</span>
+        </a>
         <span
             id="display-added"
             class="absolute hidden bg-teal-950 rounded-lg p-2 font-semibold flex items-center justify-center">You have added 4 items.</span>
     </div>
+    
+    <span class="hamburger-menu"><i
+            class="fa fa-bars font-bold text-2xl lg:text-3xl text-gold-400 cursor-pointer hover:text-gold-500"></i></span>
+
+        <!-- Mobile Menu Drawer -->
+        <div class="hamburger fixed top-20 hidden">
+            <ul class="menu bg-base-200 rounded-box w-56">
+                <li>
+                    <h2 class="menu-title">Options</h2>
+                    <ul class="text-lg links">
+                        <li><a href="index.html" class="hover:text-yellow-400 transition">Home</a></li>
+                        <li><a href="orders.html" class="hover:text-yellow-400 transition">Orders</a></li>
+                        <li><a href="#new-arrivals" class="hover:text-yellow-400 transition">New Arrivals</a></li>
+                        <li><a href="#best-sellers" class="hover:text-yellow-400 transition">Best Sellers</a></li>
+                        <li><a href="#gift-sets" class="hover:text-yellow-400 transition">Gift Sets</a></li>
+                        <li><a href="contact.html" class="hover:text-yellow-400 transition">Contact Us</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
     </header>
 
     <main class="bg-white text-white pt-24"> 
@@ -86,8 +109,8 @@
 
         </div>
         <!-- perfume card section -->
-        <div>
-            <div class="card-section grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="border-b-10 mb-2">
+            <div class="card-section grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-5">
             
                 <!-- Perfume Card Template -->
                 <div class="bg-black border border-gray-700 rounded-lg overflow-hidden shadow-lg text-white max-w-xs mx-auto">
@@ -120,9 +143,50 @@
                 </div>
                 
         </div>
+        <!-- New arrivals -->
+        <section
+            id="new-arrivals"
+            class="container mb-3 mx-auto py-10 px-6 md:px-8 lg:px-10 xl:px-14 bg-gray-900 rounded-lg shadow-2xl transition-all duration-300 ease-in-out">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-gold-400 mb-8 text-center tracking-wider">New Arrivals
+            </h2>
+        
+            <div class="arrivals grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Product Card -->
+                
+                <!-- Repeat Product Cards as needed -->
+            </div>
+        </section>
+
+        <!-- best sellers -->
+
+        <section id="best-sellers" class="container mx-auto py-10 px-6 md:px-8 lg:px-12 xl:px-16 bg-black rounded-lg shadow-lg">
+            <h2 class="text-3xl md:text-4xl font-semibold text-gold-400 mb-8 text-center">Best Sellers</h2>
+            <div class="best-sellers grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Best Seller Product Card -->
+                
+                <!-- Repeat Best Seller Cards as needed -->
+            </div>
+        </section>
+
+        <!-- gift sets -->
+
+        <section
+            id="gift-sets"
+            class="container mb-3 mx-auto py-10 px-6 md:px-8 lg:px-12 xl:px-16 bg-gradient-to-br from-black to-gray-900 rounded-lg shadow-2xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-gold-400 mb-8 text-center">Gift Sets</h2>
+            <div class="gift-sets grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Gift Set Card -->
+                
+                <!-- Repeat Gift Set Cards as needed -->
+            </div>
+        </section>
+
+
     </main>
 
-
+    <div class="mb-4">
+        <hr class="h-4">
+    </div>
     <!-- Footer Section -->
     <footer class="bg-black text-white py-10 px-8 mt-20">
     <!-- Main Footer Content -->
